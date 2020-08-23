@@ -6,7 +6,7 @@ import { ReactComponent as Light } from "./sun.svg";
 
 const Header = ({ themeMode, onClick }) => {
   return (
-    <Container>
+    <Container data-testid="header">
       <HeaderWrapper>
         <Logo>BrastleWark</Logo>
         <ColorModeContainer onClick={onClick}>

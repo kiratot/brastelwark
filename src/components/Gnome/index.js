@@ -22,9 +22,9 @@ const Gnome = ({
   thumbnail,
 }) => {
   return (
-    <Container test-id="err-msg">
+    <Container data-testid="gnome">
       <Title>{name}</Title>
-      <InfoWrapper bgUrl={thumbnail}>
+      <InfoWrapper data-testid="info" bgUrl={thumbnail}>
         <InfoBoxTop>
           <Box direction="column" p="0 0.7em" gap="0.6em">
             <Box align="baseline" justify="center" gap="0.6em">

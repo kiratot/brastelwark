@@ -4,11 +4,12 @@ import {
   LOAD_MORE_F_BRASTLEWARKERS,
   CHANGE_THEME,
 } from "./appTypes";
-import theme, { themeDark } from "../../styles/theme";
+
+import themeLight, { themeDark } from "../../styles/theme";
 
 const initialState = {
   themeMode: "Light",
-  theme,
+  theme: themeLight,
   maxShown: 10,
   count: 0,
   filteredCount: 0,
@@ -82,10 +83,10 @@ const appReducer = (state = initialState, action) => {
         filteredCount: i,
       };
     case CHANGE_THEME:
-      // theme toogling between dark and light color mode
+      // theme toggling between dark and light color mode
       return state.themeMode === "Light"
         ? { ...state, themeMode: "Dark", theme: themeDark }
-        : { ...state, themeMode: "Light", theme };
+        : { ...state, themeMode: "Light", theme: themeLight };
     default:
       return state;
   }

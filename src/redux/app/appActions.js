@@ -20,6 +20,6 @@ export const loadMoreFiltered = () => ({
   type: LOAD_MORE_F_BRASTLEWARKERS,
 });
 
-export const toogleTheme = () => ({
+export const toggleTheme = () => ({
   type: CHANGE_THEME,
 });

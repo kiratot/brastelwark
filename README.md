@@ -1,8 +1,33 @@
+## [BrastleWark](https://brastlewarklist.netlify.app) 🐉 <br><br>
+
+### Hot to use:
+
+1. Type the name, age or profession of the desired BrastleWarker you want to find <br>
+1. Scroll Down to load more Brastlewarkers <br>
+1. Hover on the search results cards to see more information<br>
+
+### Features:
+
+- Infinite scrolling : Load more Brastlewarker as you scroll.
+- Switching between Dark/Light theme: We are aware that not all "Orcs" are used to light, so we've implemented a Dark mode theme for a better UX.
+- Search bar so you can quickly find your so desired Brastlewarker.
+- The app takes in consideration heavy network calls, so no need to worry about exceeding your network quota.
+- Data fetched from API calls are automatically cached once the app loads.
+- We can also implement data persistence (in local storage for example) as a future functionality if needed.
+- Responsive design that works well with desktop, tablet and mobile devices.
+
+### External Library used in the project:
+
+- React, Redux and Styled Component (for easy theming and styled component reusability)
+- Library that could have been used: react-virtualized or react-window since we have a lot of data to render in our UI, we've implemented a simple work around to this in our redux logic.
+- Library that could have been replaced: since it was required for this project we used Redux for our state management, but we could've easily replaced the functionality by using the context API paired with useReducer hook for example.
+- Testing : Jest and React Testing Library.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run (you can also use npm if you prefer):
 
 ### `yarn start`
 

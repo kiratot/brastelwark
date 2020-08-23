@@ -19,7 +19,7 @@ export const themeDark = {
   },
 };
 
-export const theme = {
+export const themeLight = {
   color: {
     bg: {
       app: "#fff",
@@ -40,4 +40,4 @@ export const theme = {
   },
 };
 
-export default theme;
+export default themeLight;

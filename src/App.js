@@ -6,7 +6,7 @@ import { fetchData } from "./redux/data/dataActions";
 import {
   loadMore,
   loadMoreFiltered,
-  toogleTheme,
+  toggleTheme,
 } from "./redux/app/appActions";
 
 //styles
@@ -65,15 +65,17 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Layout>
-        <Header themeMode={themeMode} onClick={() => dispatch(toogleTheme())} />
+        <Header themeMode={themeMode} onClick={() => dispatch(toggleTheme())} />
         <GridContainer>
           <Heading />
           <Search value={inputValue} data={data} dispatch={dispatch} />
+
           {error && (
             <ErrorMessage>
               Something went wrong, please try again later.
             </ErrorMessage>
           )}
+
           {!loading &&
             !error &&
             inputValue.length > 0 &&
@@ -82,64 +84,24 @@ function App() {
                 Your search term doesn't match any of our records.
               </ErrorMessage>
             )}
+
           {loading && <Spinner />}
+
           {!loading &&
             !error &&
             !inputValue &&
             filteredBWShown.length === 0 &&
-            cachedBW.map(
-              ({
-                id,
-                name,
-                age,
-                height,
-                weight,
-                hair_color,
-                friends,
-                professions,
-                thumbnail,
-              }) => (
-                <Gnome
-                  key={id}
-                  name={name}
-                  age={age}
-                  height={height}
-                  weight={weight}
-                  hairColor={hair_color}
-                  friends={friends}
-                  professions={professions}
-                  thumbnail={thumbnail}
-                />
-              )
-            )}
+            cachedBW.map((props) => (
+              <Gnome key={props.id} hairColor={props.hair_color} {...props} />
+            ))}
+
           {!loading &&
             !error &&
             filteredBWShown.length > 0 &&
-            filteredBWShown.map(
-              ({
-                id,
-                name,
-                age,
-                height,
-                weight,
-                hair_color,
-                friends,
-                professions,
-                thumbnail,
-              }) => (
-                <Gnome
-                  key={id}
-                  name={name}
-                  age={age}
-                  height={height}
-                  weight={weight}
-                  hairColor={hair_color}
-                  friends={friends}
-                  professions={professions}
-                  thumbnail={thumbnail}
-                />
-              )
-            )}
+            filteredBWShown.map((props) => (
+              <Gnome key={props.id} hairColor={props.hair_color} {...props} />
+            ))}
+
           {filteredBW.length > 0 ? (
             <IntersectionObserver forwardedRef={loadMoreFilteredRef} />
           ) : (

@@ -3,7 +3,7 @@ import { Title, SubTitle, Tip, HeaderContainer } from "./style";
 
 const Heading = () => {
   return (
-    <HeaderContainer>
+    <HeaderContainer data-testid="heading">
       <Title>Find your perfect BrastleWarker fast and safe !</Title>
       <SubTitle>
         Begin by browsing our listing or type your search criteria in the search
