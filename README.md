@@ -16,7 +16,7 @@
 - We can also implement data persistence (in local storage for example) as a future functionality if needed.
 - Responsive design that works well with desktop, tablet and mobile devices.
 
-### External Library used in the project:
+### External Libraries used in this project:
 
 - React, Redux and Styled Component (for easy theming and styled component reusability)
 - Library that could have been used: react-virtualized or react-window since we have a lot of data to render in our UI, we've implemented a simple work around to this in our redux logic.
